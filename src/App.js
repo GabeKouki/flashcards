@@ -7,6 +7,7 @@ import POSCExam1 from './PoscExam1';
 import ITExam1 from './ITExam1';
 import defaultSet from './Default';
 import MTH251Exam2 from './MTH251Exam2';
+import PoscExam2 from './PoscExam2';
 
 function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -42,7 +43,7 @@ function App() {
   };
 
   const handleFlip = () => {
-    setShowAnswer(!showAnswer);
+    setShowAnswer((prevSetAnswer => !prevSetAnswer));
   };
 
   const handleSetToZero = () => {
@@ -91,6 +92,7 @@ function App() {
           <button type="button" onClick={() => handleSetSwitch(POSCExam1)}>POSC Exam 1</button>
           <button type="button" onClick={() => handleSetSwitch(ITExam1)}>IT Exam 1</button>
           <button type="button" onClick={() => handleSetSwitch(MTH251Exam2)}>MTH 251 Exam 2</button>
+          <button type="button" onClick={() => handleSetSwitch(PoscExam2)}>POSC Exam 2</button>
         </div>
         <div className="card-container" onClick={handleFlip} onKeyDown={handleFlip}>
           <div className={`card ${showAnswer ? 'flipped' : ''}`}>
