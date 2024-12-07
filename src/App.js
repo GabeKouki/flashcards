@@ -8,6 +8,7 @@ import ITExam1 from './ITExam1'
 import defaultSet from './Default'
 import MTH251Exam2 from './MTH251Exam2'
 import PoscExam2 from './PoscExam2'
+import CSITFINAL from './CSITFINAL'
 
 function App() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -106,6 +107,9 @@ function App() {
           </button>
           <button type="button" onClick={() => handleSetSwitch(PoscExam2)}>
             POSC Exam 2
+          </button>
+          <button type="button" onClick={() => handleSetSwitch(CSITFINAL)}>
+            CSIT Final Exam
           </button>
         </div>
         <div className="card-container" onClick={handleFlip} onKeyDown={handleFlip}>
